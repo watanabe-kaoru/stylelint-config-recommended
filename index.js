@@ -2,7 +2,18 @@
 
 module.exports = {
   rules: {
-    "at-rule-no-unknown": true,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "function",
+          "if",
+          "each",
+          "include",
+          "mixin"
+        ]
+      }
+    ],
     "block-no-empty": true,
     "color-no-invalid-hex": true,
     "comment-no-empty": true,
@@ -19,7 +30,7 @@ module.exports = {
     "function-linear-gradient-no-nonstandard-direction": true,
     "keyframe-declaration-no-important": true,
     "media-feature-name-no-unknown": true,
-    "no-descending-specificity": true,
+    "no-descending-specificity": null,
     "no-duplicate-at-import-rules": true,
     "no-duplicate-selectors": true,
     "no-empty-source": true,
